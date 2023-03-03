@@ -21,7 +21,20 @@
           "value": { "type": "number" }
         },
         "required": ["id", "name", "value"]
-      }
+      },
+      "minItems": 1
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "content": { "type": "string" }
+        },
+        "required": ["id", "content"]
+      },
+      "minItems": 1
     }
   },
   "required": ["id", "name", "answers"]

@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/compass.json",
-  "id": "political-compass",
+  "id": "geopolitical-compass",
   "name": "Kompas geopolityczny",
   "answers": [
     { "id": "dosc", "name": "Dość", "value": -1 },
@@ -8,5 +8,11 @@
     { "id": "nieWiem", "name": "Nie wiem", "value": 0 },
     { "id": "tak", "name": "Tak", "value": 0.5 },
     { "id": "jeszczeJak", "name": "Jeszcze jak", "value": 1 }
+  ],
+  "questions": [
+    { "id": "q1", "content": "Czy Polska jest wysuniętą kasztelanią NATO?" },
+    { "id": "q2", "content": "Czy Zychowicz to debil?" },
+    { "id": "q3", "content": "Czy należy wdrożyć armię nowego wzoru?" },
+    { "id": "q4", "content": "Czy lubię chodzić po górach?" }
   ]
 }

@@ -3,13 +3,19 @@ export default interface Compass {
   name: string;
   description?: string;
 
-  answers: Answer[];
+  answers: AnswerData[];
+  questions: QuestionData[];
 }
 
-export interface Answer {
+export interface AnswerData {
   id: string;
   name: string;
   value: string;
+}
+
+export interface QuestionData {
+  id: string;
+  content: string;
 }
 
 export const loadCompassFromJson: (json: string) => Compass = (json) => {

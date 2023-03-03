@@ -1,5 +1,4 @@
-import { Answer } from "@/lib/Compass";
-import { FormEventHandler } from "react";
+import { AnswerData } from "@/lib/Compass";
 
 export default function AnswerChooser({
   selectedAnswer,
@@ -7,7 +6,7 @@ export default function AnswerChooser({
   onAnswerChosen,
 }: {
   selectedAnswer?: string;
-  answers: Answer[];
+  answers: AnswerData[];
   onAnswerChosen: (answerKey: string) => void;
 }) {
   let answerButtons = answers.map((answer) => (
