@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/compass.json",
-  "id": "geopolitical-compass",
-  "name": "Kompas geopolityczny",
-  "description": "Ten test pomoże Ci określić to, do którego stronnictwa z szeroko pojętego uniwersum geopolitycznego Ci najbliżej!",
+  "id": "rigcz-compass",
+  "name": "Test na RiGCz",
+  "description": "Ten test pomoże Ci sprawdzić, czy masz Rozum i Godność Człowieka",
   "answers": [
     { "id": "--", "name": "Zdecydowanie nie", "value": -1 },
     { "id": "-", "name": "Raczej nie", "value": 0.5 },
