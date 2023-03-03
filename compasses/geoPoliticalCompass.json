@@ -1,0 +1,5 @@
+{
+  "$schema": "../schema/compass.json",
+  "id": "political-compass",
+  "name": "Kompas geopolityczny"
+}
