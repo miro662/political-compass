@@ -1,5 +1,12 @@
 {
   "$schema": "../schema/compass.json",
   "id": "political-compass",
-  "name": "Kompas geopolityczny"
+  "name": "Kompas geopolityczny",
+  "answers": [
+    { "id": "dosc", "name": "Dość", "value": -1 },
+    { "id": "nie", "name": "Nie", "value": 0.5 },
+    { "id": "nieWiem", "name": "Nie wiem", "value": 0 },
+    { "id": "tak", "name": "Tak", "value": 0.5 },
+    { "id": "jeszczeJak", "name": "Jeszcze jak", "value": 1 }
+  ]
 }

@@ -1,5 +1,12 @@
 {
   "$schema": "../schema/compass.json",
   "id": "geopolitical-compass",
-  "name": "Kompas polityczny"
+  "name": "Kompas polityczny",
+  "answers": [
+    { "name": "Zdecydowanie się nie zgadzam", "value": -1 },
+    { "name": "Raczej się nie zgadzam", "value": 0.5 },
+    { "name": "Nie mam zdania", "value": 0 },
+    { "name": "Raczej się zgadzam", "value": 0.5 },
+    { "name": "Zdecydowanie się zgadzam", "value": 1 }
+  ]
 }

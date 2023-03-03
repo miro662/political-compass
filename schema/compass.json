@@ -6,7 +6,23 @@
       "type": "string"
     },
     "id": {
-      "type:": "string"
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "value": { "type": "number" }
+        },
+        "required": ["id", "name", "value"]
+      }
     }
-  }
+  },
+  "required": ["id", "name", "answers"]
 }

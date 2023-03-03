@@ -2,9 +2,24 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import LocalCompassSource from "@/lib/LocalCompassSource";
 import CompassSource from "@/lib/interfaces/CompassSource";
 import Compass from "@/lib/Compass";
+import AnswerChooser from "@/components/AnswerChooser";
+import { useState } from "react";
 
 export default function CompassPage({ compass }: CompassPageProps) {
-  <h1>{compass.name}</h1>;
+  const [answer, setAnswer] = useState<string | undefined>();
+
+  return (
+    <>
+      <h1>{compass.name}</h1>
+      <AnswerChooser
+        selectedAnswer={answer}
+        answers={compass.answers}
+        onAnswerChosen={(answer) => {
+          setAnswer(answer);
+        }}
+      />
+    </>
+  );
 }
 
 interface CompassPageProps {
