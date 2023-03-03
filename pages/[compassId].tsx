@@ -5,17 +5,22 @@ import Compass from "@/lib/Compass";
 import CompassFiller from "@/components/CompassFiller";
 import { useState } from "react";
 import Results from "@/components/Results";
+import computeCompass from "@/lib/computeCompass";
 
 export default function CompassPage({ compass }: CompassPageProps) {
-  const [results, setResults] = useState<{ [key: string]: string } | null>(
+  const [answers, setAnswers] = useState<{ [key: string]: string } | null>(
     null
   );
   return (
     <>
       <h1>{compass.name}</h1>
       {compass.description ? <section>{compass.description}</section> : <></>}
-      <CompassFiller compass={compass} onFinished={setResults} />
-      {results !== null ? <Results results={results} /> : <></>}
+      <CompassFiller compass={compass} onFinished={setAnswers} />
+      {answers !== null ? (
+        <Results results={computeCompass(answers, compass)} compass={compass} />
+      ) : (
+        <></>
+      )}
     </>
   );
 }

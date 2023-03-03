@@ -3,6 +3,7 @@ export default interface Compass {
   name: string;
   description?: string;
 
+  axes: AxesData[];
   answers: AnswerData[];
   questions: QuestionData[];
 }
@@ -13,9 +14,16 @@ export interface AnswerData {
   value: string;
 }
 
+export interface AxesData {
+  id: string;
+  name: string;
+  bias?: number;
+}
+
 export interface QuestionData {
   id: string;
   content: string;
+  weights: { [key: string]: number };
 }
 
 export const loadCompassFromJson: (json: string) => Compass = (json) => {

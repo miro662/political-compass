@@ -11,9 +11,41 @@
     { "id": "jeszczeJak", "name": "Jeszcze jak", "value": 1 }
   ],
   "questions": [
-    { "id": "q1", "content": "Czy Polska jest wysuniętą kasztelanią NATO?" },
-    { "id": "q2", "content": "Czy Zychowicz to debil?" },
-    { "id": "q3", "content": "Czy należy wdrożyć armię nowego wzoru?" },
-    { "id": "q4", "content": "Czy lubię chodzić po górach?" }
+    {
+      "id": "q1",
+      "content": "Czy Polska jest wysuniętą kasztelanią NATO?",
+      "weights": {
+        "bw": -0.5,
+        "pn": -0.05
+      }
+    },
+    {
+      "id": "q2",
+      "content": "Czy Zychowicz to debil?",
+      "weights": {
+        "bw": 0.05,
+        "pn": 0.4
+      }
+    },
+    {
+      "id": "q3",
+      "content": "Czy należy wdrożyć armię nowego wzoru?",
+      "weights": {
+        "bw": -0.45,
+        "pn": -0.3
+      }
+    },
+    {
+      "id": "q4",
+      "content": "Czy lubię chodzić po górach?",
+      "weights": {
+        "bw": 0,
+        "pn": -0.25
+      }
+    }
+  ],
+  "axes": [
+    { "id": "bw", "name": "Bartosiak <-> Wolski ", "bias": 0 },
+    { "id": "pn", "name": "reszta świata <-> Napierała" }
   ]
 }

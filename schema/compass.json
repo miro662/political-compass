@@ -30,11 +30,27 @@
         "type": "object",
         "properties": {
           "id": { "type": "string" },
-          "content": { "type": "string" }
+          "content": { "type": "string" },
+          "weights": {
+            "type": "object",
+            "additionalProperties": { "type": "number" }
+          }
         },
-        "required": ["id", "content"]
+        "required": ["id", "content", "weights"]
       },
       "minItems": 1
+    },
+    "axes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "bias": { "type": "number" }
+        },
+        "required": ["id", "name"]
+      }
     }
   },
   "required": ["id", "name", "answers"]
