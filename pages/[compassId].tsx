@@ -2,29 +2,20 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import LocalCompassSource from "@/lib/LocalCompassSource";
 import CompassSource from "@/lib/interfaces/CompassSource";
 import Compass from "@/lib/Compass";
-import AnswerChooser from "@/components/AnswerChooser";
+import CompassFiller from "@/components/CompassFiller";
 import { useState } from "react";
-import Question from "@/components/Question";
+import Results from "@/components/Results";
 
 export default function CompassPage({ compass }: CompassPageProps) {
-  const [answers, setAnswers] = useState<{ [key: string]: string }>({});
-
-  const questions = compass.questions.map((question) => (
-    <Question
-      key={question.id}
-      question={question}
-      answers={compass.answers}
-      selectedAnswer={answers[question.id]}
-      onAnswerChosen={(answer) => {
-        setAnswers({ ...answers, [question.id]: answer });
-      }}
-    ></Question>
-  ));
-
+  const [results, setResults] = useState<{ [key: string]: string } | null>(
+    null
+  );
   return (
     <>
       <h1>{compass.name}</h1>
-      <main>{questions}</main>
+      {compass.description ? <section>{compass.description}</section> : <></>}
+      <CompassFiller compass={compass} onFinished={setResults} />
+      {results !== null ? <Results results={results} /> : <></>}
     </>
   );
 }

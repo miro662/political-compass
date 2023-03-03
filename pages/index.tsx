@@ -5,9 +5,10 @@ import CompassSource, { CompassSummary } from "@/lib/interfaces/CompassSource";
 import Link from "next/link";
 
 export default function Home({ compasses }: { compasses: CompassSummary[] }) {
-  const compassList = compasses.map(({ id, name }) => (
+  const compassList = compasses.map(({ id, name, description }) => (
     <li key={name}>
       <Link href={id}>{name}</Link>
+      <span>{description ? ` - ${description}` : ""}</span>
     </li>
   ));
   return (

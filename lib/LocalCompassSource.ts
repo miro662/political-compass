@@ -24,9 +24,10 @@ export const getAvailableCompasses: () => Promise<
   CompassSummary[]
 > = async () => {
   const compasses = await getCompasses();
-  return Array.from(compasses.values()).map(({ id, name }) => ({
-    id,
-    name,
+  return Array.from(compasses.values()).map((compass) => ({
+    id: compass.id,
+    name: compass.name,
+    description: compass.description !== undefined ? compass.description : null,
   }));
 };
 

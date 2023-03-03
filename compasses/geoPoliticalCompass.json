@@ -2,6 +2,7 @@
   "$schema": "../schema/compass.json",
   "id": "geopolitical-compass",
   "name": "Kompas geopolityczny",
+  "description": "Którym ze znanych geopolityków jesteś?",
   "answers": [
     { "id": "dosc", "name": "Dość", "value": -1 },
     { "id": "nie", "name": "Nie", "value": 0.5 },
