@@ -5,6 +5,7 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import { PropsWithChildren } from "react";
 import { Url } from "next/dist/shared/lib/router/router";
+import { H } from "@/components/Repeatable";
 
 function Cards({ children }: PropsWithChildren) {
   return (
@@ -26,9 +27,7 @@ function Card({
       <div className="transition-color group flex flex-col shadow-lg transition-transform hover:shadow-slate-300 sm:h-40 sm:flex-row md:h-72 md:flex-col md:hover:scale-105 ">
         <div className="h-20 bg-slate-300 p-2 transition-all group-hover:saturate-200 sm:h-auto sm:basis-2/5 "></div>
         <div className="flex basis-3/5 flex-col gap-1 p-2 ">
-          <h2 className="font-serif text-2xl font-semibold lowercase tracking-wider">
-            {title}
-          </h2>
+          <H level={1}>{title}</H>
           <div className="font-sans font-light tracking-tight">
             {description ?? ""}
           </div>

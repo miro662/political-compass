@@ -4,15 +4,16 @@
   "name": "Kompas geopolityczny",
   "description": "Ten test pomoże Ci określić to, do którego stronnictwa z szeroko pojętego uniwersum geopolitycznego Ci najbliżej!",
   "answers": [
-    { "id": "--", "name": "Zdecydowanie nie", "value": -1 },
-    { "id": "-", "name": "Raczej nie", "value": 0.5 },
-    { "id": "0", "name": "Nie mam zdania", "value": 0 },
-    { "id": "+", "name": "Raczej tak", "value": 0.5 },
     {
       "id": "++",
       "name": "Zdecydowanie tak",
-      "value": 1
-    }
+      "value": 1,
+      "color": "teal"
+    },
+    { "id": "+", "name": "Raczej tak", "value": 0.5, "color": "green" },
+    { "id": "0", "name": "Nie mam zdania", "value": 0, "color": "yellow" },
+    { "id": "-", "name": "Raczej nie", "value": 0.5, "color": "orange" },
+    { "id": "--", "name": "Zdecydowanie nie", "value": -1, "color": "rose" }
   ],
   "questions": [
     {

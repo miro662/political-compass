@@ -1,55 +1,20 @@
 {
   "$schema": "../schema/compass.json",
   "id": "left-wing-compass",
-  "name": "Test na lewicowość",
-  "description": "Ten test pomoże Ci określić czy jesteś lewakiem",
+  "name": "Test na bycie lewakiem",
+  "description": "Ten test pomoże Ci dowiedzieć się, jak bardzo jesteś lewakiem!",
   "answers": [
-    { "id": "--", "name": "Zdecydowanie nie", "value": -1 },
-    { "id": "-", "name": "Raczej nie", "value": 0.5 },
-    { "id": "0", "name": "Nie mam zdania", "value": 0 },
-    { "id": "+", "name": "Raczej tak", "value": 0.5 },
-    {
-      "id": "++",
-      "name": "Zdecydowanie tak",
-      "value": 1
-    }
+    { "id": "+", "name": "Tak", "value": 1, "color": "green" },
+    { "id": "-", "name": "Nie", "value": -1, "color": "red" }
   ],
   "questions": [
     {
       "id": "q1",
-      "content": "Czy Twoim zdaniem Polska pełni obecnie rolę wysuniętej kasztelanii NATO?",
+      "content": "Czy socjalizm jest wtedy, gdy państwo robi rzeczy?",
       "weights": {
-        "bw": -0.5,
-        "pn": -0.05
-      }
-    },
-    {
-      "id": "q2",
-      "content": "Czy Twoim zdaniem Piotr Zychowicz jest słabym historykiem, uciekającym się w swojej twórczości do kłamstw i manipulacji?",
-      "weights": {
-        "bw": 0.05,
-        "pn": 0.4
-      }
-    },
-    {
-      "id": "q3",
-      "content": "Czy uważasz, że reforma Wojska Polskiego zgodnie z założeniami przedstawionymi w książce \"Armia Nowego Wzoru\" będzie korzystna dla Polski?",
-      "weights": {
-        "bw": -0.45,
-        "pn": -0.3
-      }
-    },
-    {
-      "id": "q4",
-      "content": "Czy jesteś fanem wspólnych górskich wycieczek?",
-      "weights": {
-        "bw": 0,
-        "pn": -0.25
+        "l": -1068.5
       }
     }
   ],
-  "axes": [
-    { "id": "bw", "name": "Bartosiak <-> Wolski ", "bias": 0 },
-    { "id": "pn", "name": "reszta świata <-> Napierała" }
-  ]
+  "axes": [{ "id": "l", "name": "Twoje lewactwo", "bias": 1068.5 }]
 }

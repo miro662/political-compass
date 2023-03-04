@@ -12,6 +12,7 @@ export interface AnswerData {
   id: string;
   name: string;
   value: string;
+  color?: string;
 }
 
 export interface AxesData {

@@ -3,26 +3,50 @@ import LocalCompassSource from "@/lib/LocalCompassSource";
 import CompassSource from "@/lib/interfaces/CompassSource";
 import Compass from "@/lib/Compass";
 import CompassFiller from "@/components/compass/CompassFiller";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Results from "@/components/compass/Results";
 import computeCompass from "@/lib/computeCompass";
 import Layout from "@/components/Layout";
+import { H, P } from "@/components/Repeatable";
 
 export default function CompassPage({ compass }: CompassPageProps) {
   const [answers, setAnswers] = useState<{ [key: string]: string } | null>(
     null
   );
+  useEffect(
+    () =>
+      window.scrollTo({
+        left: 0,
+        top: document.body.scrollHeight,
+        behavior: "smooth",
+      }),
+    [answers]
+  );
   return (
     <Layout>
-      <h1>{compass.name}</h1>
-      {compass.description ? <section>{compass.description}</section> : <></>}
-      <CompassFiller compass={compass} onFinished={setAnswers} />
+      <CompassHeader compass={compass} />
+      <CompassFiller
+        compass={compass}
+        onFinished={(answers) => {
+          setAnswers(answers);
+        }}
+      />
       {answers !== null ? (
         <Results results={computeCompass(answers, compass)} compass={compass} />
       ) : (
         <></>
       )}
     </Layout>
+  );
+}
+
+function CompassHeader({ compass }: { compass: Compass }) {
+  return (
+    <div>
+      <div className="mb-4 h-32 w-auto bg-slate-300 sm:h-48"></div>
+      <H level={1}>{compass.name}</H>
+      <P>{compass.description ?? ""}</P>
+    </div>
   );
 }
 

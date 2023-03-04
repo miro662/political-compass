@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const sansFont = Poppins({
   subsets: ["latin"],
-  weight: ["200", "400"],
+  weight: ["200", "400", "600"],
   variable: "--sans-font",
 });
 
@@ -46,9 +46,9 @@ export default function Layout({
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <div className="mx-auto flex h-screen max-w-3xl flex-col justify-between px-4 font-sans">
+      <div className="mx-auto flex h-screen max-w-3xl flex-col justify-between px-4 font-sans font-light">
         <Header />
-        <div className="mb-auto">{children}</div>
+        <div className="mb-auto flex flex-col gap-12">{children}</div>
         <Footer />
       </div>
     </main>
